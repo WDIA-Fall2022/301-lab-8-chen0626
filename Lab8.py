@@ -1,3 +1,4 @@
+
 #Prompts the user for the number of Tests
 #Note that this function will include call(s) to the input function
 #Keep prompting until the number is an integer. Each grade is in between 0 and 100..
@@ -146,7 +147,7 @@ while True:
 #Calculate the average test grade.
 
 n = getNumberOfTests()
-testGrade=[]
+testGrade = []
 i = 0
 while i in range(n):
     if i < n:
@@ -161,8 +162,7 @@ while i in range(n):
             print("Invalid")
 
 total = sum(testGrade)
-AvgTests = total/n
-
+AvgTests = total/len(testGrade)
 
 
 #Prompt and get the final grade
