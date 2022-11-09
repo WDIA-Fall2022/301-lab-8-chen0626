@@ -161,8 +161,7 @@ while i in range(n):
         except ValueError:
             print("Invalid")
 
-total = sum(testGrade)
-AvgTests = total/len(testGrade)
+AvgTests = sum(testGrade)/len(testGrade)
 
 
 #Prompt and get the final grade
