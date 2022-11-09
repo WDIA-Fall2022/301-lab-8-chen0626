@@ -1,4 +1,3 @@
-
 #Prompts the user for the number of Tests
 #Note that this function will include call(s) to the input function
 #Keep prompting until the number is an integer. Each grade is in between 0 and 100..
