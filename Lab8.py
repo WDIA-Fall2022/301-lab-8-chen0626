@@ -1,4 +1,3 @@
-
 #Prompts the user for the number of Tests
 #Note that this function will include call(s) to the input function
 #Keep prompting until the number is an integer. Each grade is in between 0 and 100..
@@ -6,11 +5,11 @@
 def getNumberOfTests():
     while True:
         try:
-            t = int(input("please enter number of your tests: "))
-            if 0 <= t <= 100:
+            t = int(input("Please enter number of your tests: "))
+            if 0 < t:
                 break
             else:
-                print("Enter an integer between 0 and 100")
+                print("Number of your tests must greater than 0")
         except ValueError:
             print("Sorry, I don't understand it.")
     return t
@@ -22,7 +21,7 @@ def getNumberOfTests():
 def getWeightOfAssignments():
     while True:
         try:
-            a = float(input("please enter the weight of assignments: "))
+            a = float(input("Please enter the weight of assignments: "))
             if 0 <= a <= 1:
                 break
             else:
@@ -38,7 +37,7 @@ def getWeightOfAssignments():
 def getWeightOfMidTerms():
     while True:
         try:
-            m = float(input("please enter the weight of Midterms: "))
+            m = float(input("Please enter the weight of Midterms: "))
             if 0 <= m <= 1:
                 break
             else:
@@ -54,7 +53,7 @@ def getWeightOfMidTerms():
 def getWeightOfFinal():
     while True:
         try:
-            f = float(input("please enter the weight of the final: "))
+            f = float(input("Please enter the weight of the final: "))
             if 0 <= f <= 1:
                 break
             else:
@@ -109,7 +108,7 @@ def calculateLetterGrade(numericGrade):
     elif 0 <= numericGrade <= 49:
         grade = 'F'
     else:
-        print("please enter an integer")
+        print("Please enter an integer")
 
     return grade
 
@@ -127,13 +126,13 @@ while True:
     if checkWeights(wAssign, wMidTerm, wFinal) == 1:
         break
     else:
-        print('try again')
+        print('Try again')
 #Get the average grade obtained on the assignments
 #Validate the input as a float between 0 and 100
 
 while True:
     try:
-        AvgAssignments = float(input("please enter your average assignments grade: "))
+        AvgAssignments = float(input("Please enter your average assignments grade: "))
         if 0 <= AvgAssignments <= 100:
             break
         else:
@@ -152,7 +151,7 @@ i = 0
 while i in range(n):
     if i < n:
         try:
-            test = float(input('please enter your mark on the test: '))
+            test = float(input('Please enter your mark on the test: '))
             if 0 <= test <= 100:
                 testGrade.append(test)
                 i += 1
@@ -163,13 +162,12 @@ while i in range(n):
 
 AvgTests = sum(testGrade)/len(testGrade)
 
-
 #Prompt and get the final grade
 #Validate the input as a float between 0 and 100
 
 while True:
     try:
-        final = float(input("please enter your final grade: "))
+        final = float(input("Please enter your final grade: "))
         if 0 <= final <= 100:
             break
         else:
